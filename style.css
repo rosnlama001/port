@@ -77,7 +77,7 @@
 /* Home Section Style */
 .home{
     display: flex;
-    background: url("img/homeBg.jpg") no-repeat center fixed;
+    background: url("img/homeBg.png") no-repeat center fixed;
     background-size: cover;
     height: 100vh;
     color: white;
