@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&family=Dancing+Script:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* NavBar Styling */
+.navBar{
+    position: fixed;
+    background: linear-gradient(to right,rgba(45, 70, 185,.7),rgba(45, 70, 185,0));
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all .3s ease;
+    z-index: 998;
+}
+.navBar.sticky{
+    padding: 15px 0;
+    background: linear-gradient(to right,rgba(45, 70, 185,0),rgba(45, 70, 185,.7));
+    background: rgb(45, 70, 185);
+    margin-top: 0;
+    /* opacity: 50%; */
+}
+.maxWidth{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.navBar .maxWidth{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navBar .logo a{
+    color: white;
+    font-size: 40px;
+    font-weight: 600px;
+}
+.navBar .logo a span{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    font-kerning: normal;
+    color: #FF2626;
+    transition: all .3s ease;
+}
+.navBar.sticky .logo a span{
+    color: white;
+}
+.navBar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+.navBar .menu li a{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color .3s ease-in;
+}
+.navBar .menu li a:hover{
+    color: crimson;
+}
+.navBar.sticky .menu li a:hover{
+    color: white;
+}
+/* ********************************** */
+/* Menu btn style */
+.menuBtn{
+    color: white;
+    cursor: pointer;
+    font-size: 33px;
+    display: none;
+}
+/* *************************************************** */
+/* Home Section Style */
+.home{
+    display: flex;
+    background: url("img/homeBg.jpg") no-repeat center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    min-height: 500px;
+    font-family: 'Ubuntu',sans-serif;
+    width: 100%;
+}
+.home .maxWidth{
+    margin: auto 0 auto 40px;
+}
+.home .homeContent .text-1{
+    font-size: 27px;
+}
+.home .homeContent .text-2{
+    font-family: 'Cookie', cursive;
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+    transition: all .3s linear;
+}
+.home.stick .homeContent .text-2{
+    color: #0CECDD;
+    font-weight: 200;
+
+}
+.home .homeContent .text-3{
+    font-size: 40px;
+    margin-left: 5px 0;
+}
+.home .homeContent .text-3 span{
+    color: crimson;
+    font-weight: 500;
+    animation: colr 2s linear infinite alternate;
+}
+.home .homeContent .text-3 .fas{
+    font-size: 30px;
+    animation: heartBit 2s linear infinite alternate;
+}
+@keyframes heartBit{
+    from {
+        transform: scale(1.1);
+    }to{
+        transform: scale(2.2);
+    }
+}
+@keyframes colr{
+    from {
+        color: white;
+    }to{
+        color: crimson;
+    }
+}
+/* *************************************************** */
+/* About Me Section Style */
+section{
+    padding: 100px 0;
+}
+.about{
+    font-family: 'Poppins',sans-serif;
+}
+.about .aboutContent{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .aboutContent .left{
+    width: 45%;
+}
+.about .aboutContent .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .aboutContent .right{
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.about .aboutContent .right .heading{
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+.about .aboutContent .right .heading::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: black;
+    transform: translateX(-50%);
+}
+.about .aboutContent .right .heading::after{
+    content: "Who am i";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    background: white;
+    transform: translateX(-50%);
+}
+.about .aboutContent .right .firstLine{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .aboutContent .right .firstLine span{
+    color: crimson;
+}
+.about .aboutContent .right p{
+    text-align: justify;
+}
+.about .aboutContent .right a{
+    align-self: center;
+    width: 70%;
+    background: crimson;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 3px 30px;
+    margin-top: 30px;
+    border-radius: 6px;
+    transition: all 0.3s linear;
+}
+.about .aboutContent .right a:hover{
+    border: 2px solid green;
+    color: green;
+    background: none;
+    font-weight: 700;
+}
+.about .aboutContent .right a:active{
+    background: crimson;
+}
+/* ********************************************************** */
+
+/* Skill Section design */
+.skills {
+    width: 100%;
+    margin: 10px 0px;
+    background: var(--nav-color-sticky);
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 1px #000;
+    color: #fff;
+    padding-top: 10px;
+}
+.skill .skillContent{
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+}
+
+
+.skill .skillContent .heading{
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+.skill .skillContent .heading::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: black;
+    transform: translateX(-50%);
+}
+.skill .skillContent .heading::after{
+    content: "What i know";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+.skill .skillContent .skillFrame{
+    display: flex;
+    height: auto;
+    /* width: 100%; */
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.skill .skillContent .skillFrame .skillBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 230px;
+    padding: 5px;
+    margin: 5px;
+}
+.skill .skillContent .skillFrame .skillBox .progressBar{
+    display: flex;
+    width: 175px;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+}
+.skill .skillContent .skillFrame .skillBox .progressCell{
+    width: 28px;
+    height: 8px;
+    background-color: rgba(204, 201, 201, 0.87);
+    padding: 3px;
+    margin: 3px;
+    border-radius: 5px 0 5px 0;
+}
+.skill .skillContent .skillFrame .skillBox .name span{
+    color: #FF2626;
+}
+
+
+
+
+/* ********************************** */
+/* Responsiv media query */
+@media only screen and (max-width: 1330px){
+    .home .maxWidth{
+        margin-left: 0px;
+    }
+}
+@media only screen and (max-width: 1104px){
+    @keyframes heartBit{
+        from {
+            transform: scale(1.1);
+        }to{
+            transform: scale(2.1);
+        }
+    }
+    .about .aboutContent .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+@media only screen and (max-width: 991px){
+    @keyframes heartBit{
+        from {
+            transform: scale(1.1);
+        }to{
+            transform: scale(1.7);
+        }
+    }
+    .maxWidth{
+        padding: 0 50px;
+    }
+    .about .aboutContent .left img{
+        height: 300px;
+        width: 300px;
+    }
+}
+@media only screen and (max-width: 947px){
+    @keyframes heartBit{
+        from {
+            transform: scale(1.1);
+        }to{
+            transform: scale(1.5);
+        }
+    }
+    .menuBtn{
+        display: block;
+        z-index: 999;
+    }
+    .menuBtn i.active:before{
+        content: "\f00d";
+    }
+    .navBar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: black;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all .3s ease;
+    }
+    .navBar .menu.active{
+        right: 0;
+    }
+    .navBar .menu li{
+        display: block;
+    }
+    .navBar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .homeContent .text-2{
+        font-size: 70px;
+    }
+    .home .homeContent .text-3{
+        font-size: 35px;
+    }
+    .about .aboutContent .column{
+        flex: 100%;
+    }
+    .about .aboutContent .left img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+     
+}
+@media only screen and (max-width: 690px){
+    .maxWidth{
+        padding: 0 23px;
+    }
+    .home .homeContent .text-2{
+        font-size: 60px;
+    }
+    .home .homeContent .text-3{
+        font-size: 32px;
+    }
+}
+@media only screen and (max-width: 500px){
+    .maxWidth{
+        padding: 0 23px;
+    }
+    .home .homeContent .text-2{
+        font-size: 50px;
+    }
+    .home .homeContent .text-3{
+        font-size: 27px;
+    }
+}
