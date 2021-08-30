@@ -60,7 +60,7 @@
     transition: color .3s ease-in;
 }
 .navBar .menu li a:hover{
-    color: crimson;
+    color: #FF4848;
 }
 .navBar.sticky .menu li a:hover{
     color: white;
@@ -77,7 +77,7 @@
 /* Home Section Style */
 .home{
     display: flex;
-    background: url("Img/homeBg.png") no-repeat center fixed;
+    background: url("Img/homeBg.jpg") no-repeat center fixed;
     background-size: cover;
     height: 100vh;
     color: white;
@@ -108,7 +108,7 @@
     margin-left: 5px 0;
 }
 .home .homeContent .text-3 span{
-    color: crimson;
+    color: #FF4848;
     font-weight: 500;
     animation: colr 2s linear infinite alternate;
 }
@@ -184,7 +184,7 @@ section{
     bottom: -12px;
     left: 50%;
     font-size: 20px;
-    color: crimson;
+    color: #FF4848;
     padding: 5px;
     background: white;
     transform: translateX(-50%);
@@ -195,15 +195,16 @@ section{
     margin-bottom: 10px;
 }
 .about .aboutContent .right .firstLine span{
-    color: crimson;
+    color: #FF4848;
 }
 .about .aboutContent .right p{
     text-align: justify;
 }
 .about .aboutContent .right a{
+    border: 2px solid #FF4848;
     align-self: center;
     width: 70%;
-    background: crimson;
+    background: #FF4848;
     text-align: center;
     color: white;
     font-size: 20px;
@@ -216,10 +217,10 @@ section{
     border: 2px solid green;
     color: green;
     background: none;
-    font-weight: 700;
+    font-weight: 500;
 }
 .about .aboutContent .right a:active{
-    background: crimson;
+    background: #FF4848;
 }
 /* ********************************************************** */
 
@@ -240,8 +241,6 @@ section{
     font-family: "Ubuntu", sans-serif;
     font-weight: 600;
 }
-
-
 .skill .skillContent .heading{
     font-family: 'Ubuntu', sans-serif;
     position: relative;
@@ -261,13 +260,14 @@ section{
     background: black;
     transform: translateX(-50%);
 }
+
 .skill .skillContent .heading::after{
     content: "What i know";
     position: absolute;
     bottom: -12px;
     left: 50%;
     font-size: 20px;
-    color: crimson;
+    color: #FF4848;
     padding: 5px;
     background: white;
     transform: translateX(-50%);
@@ -276,7 +276,6 @@ section{
 .skill .skillContent .skillFrame{
     display: flex;
     height: auto;
-    /* width: 100%; */
     flex-flow: row wrap;
     justify-content: center;
 }
@@ -285,9 +284,16 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 0 0 230px;
-    padding: 5px;
+    flex: 0 0 260px;
+    padding: 10px;
     margin: 5px;
+    
+}
+.skill .ico{
+   transition: all 300ms ease;
+}
+.skill .ico:hover{
+    transform: scale(1.2);
 }
 .skill .skillContent .skillFrame .skillBox .progressBar{
     display: flex;
@@ -295,6 +301,9 @@ section{
     height: 25px;
     align-items: center;
     justify-content: center;
+}
+.skill .skillContent .skillFrame .skillBox .name span{
+    color: #FF4848;
 }
 .skill .skillContent .skillFrame .skillBox .progressCell{
     width: 28px;
@@ -304,21 +313,108 @@ section{
     margin: 3px;
     border-radius: 5px 0 5px 0;
 }
-.skill .skillContent .skillFrame .skillBox .name span{
-    color: #FF2626;
+.html .progressCell:nth-child(-n+4){
+    background: #FF4848 !important;
 }
+.css .progressCell:nth-child(-n+4){
+    background: #FF4848 !important;
+}
+.js .progressCell:nth-child(-n+4){
+    background: #FF4848 !important;
+}
+.jq .progressCell:nth-child(-n+4){
+    background: #FF4848 !important;
+}
+.node .progressCell:nth-child(-n+3){
+    background: #FF4848 !important;
+}
+.php .progressCell:nth-child(-n+4){
+    background: #FF4848 !important;
+}
+.py .progressCell:nth-child(-n+4){
+    background: #FF4848 !important;
+}
+.java .progressCell:nth-child(-n+3){
+    background: #FF4848 !important;
+}
+.dj .progressCell:nth-child(-n+2){
+    background: #FF4848 !important;
+}
+.mysql .progressCell:nth-child(-n+4){
+    background: #FF4848 !important;
+}
+.linux .progressCell:nth-child(-n+3){
+    background: #FF4848 !important;
+}
+.ph .progressCell:nth-child(-n+3){
+    background: #FF4848 !important;
+}
+.kivy .progressCell:nth-child(-n+3){
+    background: #FF4848 !important;
+}
+/* ********************************** */
+/* Project section design */
+.project .projectContent .heading{
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+.project .projectContent .heading::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: black;
+    transform: translateX(-50%);
+}
+
+.project .projectContent .heading::after{
+    content: "What i did ";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: #FF4848;
+    padding: 5px;
+    background: white;
+    transform: translateX(-50%);
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 /* ********************************** */
 /* Responsiv media query */
-@media only screen and (max-width: 1330px){
+@media (max-width: 1330px){
     .home .maxWidth{
         margin-left: 0px;
     }
 }
-@media only screen and (max-width: 1104px){
+@media (max-width: 1104px){
     @keyframes heartBit{
         from {
             transform: scale(1.1);
@@ -331,7 +427,7 @@ section{
         width: 350px;
     }
 }
-@media only screen and (max-width: 991px){
+@media (max-width: 991px){
     @keyframes heartBit{
         from {
             transform: scale(1.1);
@@ -347,7 +443,7 @@ section{
         width: 300px;
     }
 }
-@media only screen and (max-width: 947px){
+@media (max-width: 947px){
     @keyframes heartBit{
         from {
             transform: scale(1.1);
@@ -400,7 +496,7 @@ section{
     }
      
 }
-@media only screen and (max-width: 690px){
+@media (max-width: 690px){
     .maxWidth{
         padding: 0 23px;
     }
@@ -411,7 +507,7 @@ section{
         font-size: 32px;
     }
 }
-@media only screen and (max-width: 500px){
+@media (max-width: 500px){
     .maxWidth{
         padding: 0 23px;
     }
